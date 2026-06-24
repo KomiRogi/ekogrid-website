@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@import "@fontsource/inter";
+
+@font-face {
+  font-family: "Strichpunkt";
+  src: url("/fonts/strichpunkt/StrichpunktSans_Expanded-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Strichpunkt";
+  src: url("/fonts/strichpunkt/StrichpunktSans_Expanded-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Strichpunkt";
+  src: url("/fonts/strichpunkt/StrichpunktSans_Expanded-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Strichpunkt";
+  src: url("/fonts/strichpunkt/StrichpunktSans_Expanded-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ConsolasBrand";
+  src: url("/fonts/consolas/CONSOLAB.ttf") format("truetype");
+  font-weight: 700;
+}
+
+:root {
+  --font-heading: "ConsolasBrand", monospace;
+  --font-body: "Inter", sans-serif;
+  --font-accent: "ConsolasBrand", monospace;
+  --ekogrid-bg: #223330;
+  --ekogrid-bg-dark: #07110d;
+  --ekogrid-surface: #243d35;
+  --ekogrid-surface-soft: #2f4a41;
+
+  --ekogrid-lime: #DBFC4C;
+  --ekogrid-lime-soft: #dffb72;
+  --ekogrid-green: #00d46a;
+
+  --ekogrid-text: #f5f7f2;
+  --ekogrid-muted: #b8c7bf;
+  --ekogrid-border: rgba(219, 252, 76, 0.16);
+}
+
+body {
+  background: var(--ekogrid-bg-dark);
+  color: var(--ekogrid-text);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+.eyebrow {
+  font-family: var(--font-accent);
+}
+
+html {
+  scroll-behavior: smooth;
+}
