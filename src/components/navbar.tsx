@@ -12,53 +12,75 @@ export default function Navbar() {
 
     return (
         <header className="fixed top-0 z-50 w-full border-b border-white/5 bg-[#223330]/90 backdrop-blur-2xl">
-            <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 text-white">
+            <nav className="mx-auto grid max-w-7xl grid-cols-2 items-center px-6 py-4 text-white md:grid-cols-[auto_1fr_auto]">
+
+                {/* Logo */}
                 <Image
                     src="/logo/ekogrid-logo3.svg"
                     alt="EkoGrid logo"
-                    width={100}
-                    height={40}
+                    width={140}
+                    height={50}
                     priority
-                    className="h-10 w-auto"
+                    className="h-12 w-auto"
                 />
 
-                {/* Desktop meni */}
-                <div className="hidden items-center gap-8 text-sm text-[var(--ekogrid-muted)] md:flex">
-                    <a href={`/${locale}`} className="hover:text-[var(--ekogrid-lime)]">
+                {/* Desktop Menu */}
+                <div className="hidden items-center justify-center gap-10 text-sm text-[var(--ekogrid-muted)] md:flex">
+                    <a
+                        href={`/${locale}`}
+                        className="hover:text-[var(--ekogrid-lime)] transition"
+                    >
                         {t("home")}
                     </a>
 
-                    <a href={`/${locale}/about`} className="hover:text-[var(--ekogrid-lime)]">
+                    <a
+                        href={`/${locale}/about`}
+                        className="hover:text-[var(--ekogrid-lime)] transition"
+                    >
                         {t("about")}
                     </a>
 
                     <div className="group relative">
-                        <button className="hover:text-[var(--ekogrid-lime)]">
+                        <button className="hover:text-[var(--ekogrid-lime)] transition">
                             {t("solar")}
                         </button>
 
                         <div className="invisible absolute left-1/2 top-full z-50 mt-4 w-72 -translate-x-1/2 rounded-2xl border border-[var(--ekogrid-border)] bg-[var(--ekogrid-bg)]/95 p-3 opacity-0 shadow-2xl backdrop-blur-xl transition-all duration-200 group-hover:visible group-hover:opacity-100">
-                            <a href={`/${locale}/solutions/residential`} className="block rounded-xl px-4 py-3 text-white/80 hover:bg-white/5 hover:text-[var(--ekogrid-lime)]">
+                            <a
+                                href={`/${locale}/solutions/residential`}
+                                className="block rounded-xl px-4 py-3 text-white/80 hover:bg-white/5 hover:text-[var(--ekogrid-lime)]"
+                            >
                                 {t("residential")}
                             </a>
-                            <a href={`/${locale}/solutions/business`} className="block rounded-xl px-4 py-3 text-white/80 hover:bg-white/5 hover:text-[var(--ekogrid-lime)]">
+
+                            <a
+                                href={`/${locale}/solutions/business`}
+                                className="block rounded-xl px-4 py-3 text-white/80 hover:bg-white/5 hover:text-[var(--ekogrid-lime)]"
+                            >
                                 {t("business")}
                             </a>
-                            <a href={`/${locale}/solutions/investors`} className="block rounded-xl px-4 py-3 text-white/80 hover:bg-white/5 hover:text-[var(--ekogrid-lime)]">
+
+                            <a
+                                href={`/${locale}/solutions/investors`}
+                                className="block rounded-xl px-4 py-3 text-white/80 hover:bg-white/5 hover:text-[var(--ekogrid-lime)]"
+                            >
                                 {t("investors")}
                             </a>
                         </div>
                     </div>
 
-                    <a href={`/${locale}#footer`} className="hover:text-[var(--ekogrid-lime)]">
+                    <a
+                        href={`/${locale}#footer`}
+                        className="hover:text-[var(--ekogrid-lime)] transition"
+                    >
                         {t("contact")}
                     </a>
                 </div>
 
-                <div className="flex items-center gap-5">
+                {/* Language + Hamburger */}
+                <div className="flex items-center justify-end gap-5">
                     <LanguageSwitcher />
 
-                    {/* Hamburger samo na mobilnom */}
                     <button
                         type="button"
                         onClick={() => setIsOpen(!isOpen)}
@@ -70,34 +92,62 @@ export default function Navbar() {
                 </div>
             </nav>
 
-            {/* Mobilni meni */}
+            {/* Mobile Menu */}
             {isOpen && (
                 <div className="mx-6 mb-4 flex flex-col gap-3 rounded-2xl border border-white/10 bg-[#172622] p-4 text-sm text-white/80 md:hidden">
-                    <a href={`/${locale}`} onClick={() => setIsOpen(false)} className="rounded-xl px-3 py-3 hover:bg-white/5 hover:text-[var(--ekogrid-lime)]">
+                    <a
+                        href={`/${locale}`}
+                        onClick={() => setIsOpen(false)}
+                        className="rounded-xl px-3 py-3 hover:bg-white/5 hover:text-[var(--ekogrid-lime)]"
+                    >
                         {t("home")}
                     </a>
 
-                    <a href={`/${locale}/about`} onClick={() => setIsOpen(false)} className="rounded-xl px-3 py-3 hover:bg-white/5 hover:text-[var(--ekogrid-lime)]">
+                    <a
+                        href={`/${locale}/about`}
+                        onClick={() => setIsOpen(false)}
+                        className="rounded-xl px-3 py-3 hover:bg-white/5 hover:text-[var(--ekogrid-lime)]"
+                    >
                         {t("about")}
                     </a>
 
                     <div className="rounded-xl px-3 py-3">
-                        <p className="mb-2 text-[var(--ekogrid-lime)]">{t("solar")}</p>
+                        <p className="mb-2 font-medium text-[var(--ekogrid-lime)]">
+                            {t("solar")}
+                        </p>
 
                         <div className="flex flex-col gap-2 pl-3">
-                            <a href={`/${locale}/solutions/residential`} onClick={() => setIsOpen(false)} className="py-2 hover:text-[var(--ekogrid-lime)]">
+                            <a
+                                href={`/${locale}/solutions/residential`}
+                                onClick={() => setIsOpen(false)}
+                                className="py-2 hover:text-[var(--ekogrid-lime)]"
+                            >
                                 {t("residential")}
                             </a>
-                            <a href={`/${locale}/solutions/business`} onClick={() => setIsOpen(false)} className="py-2 hover:text-[var(--ekogrid-lime)]">
+
+                            <a
+                                href={`/${locale}/solutions/business`}
+                                onClick={() => setIsOpen(false)}
+                                className="py-2 hover:text-[var(--ekogrid-lime)]"
+                            >
                                 {t("business")}
                             </a>
-                            <a href={`/${locale}/solutions/investors`} onClick={() => setIsOpen(false)} className="py-2 hover:text-[var(--ekogrid-lime)]">
+
+                            <a
+                                href={`/${locale}/solutions/investors`}
+                                onClick={() => setIsOpen(false)}
+                                className="py-2 hover:text-[var(--ekogrid-lime)]"
+                            >
                                 {t("investors")}
                             </a>
                         </div>
                     </div>
 
-                    <a href={`/${locale}#footer`} onClick={() => setIsOpen(false)} className="rounded-xl px-3 py-3 hover:bg-white/5 hover:text-[var(--ekogrid-lime)]">
+                    <a
+                        href={`/${locale}#footer`}
+                        onClick={() => setIsOpen(false)}
+                        className="rounded-xl px-3 py-3 hover:bg-white/5 hover:text-[var(--ekogrid-lime)]"
+                    >
                         {t("contact")}
                     </a>
                 </div>
