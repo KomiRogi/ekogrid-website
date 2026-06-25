@@ -32,7 +32,9 @@
         "phone": "Telefon",
         "location": "Grad i opština",
         "message": "Kratko opišite objekat ili projekat",
-        "button": "Pošalji upit"
+        "button": "Pošalji upit",
+        "successTitle": "Hvala na upitu.",
+        "successText": "Primili smo vašu poruku. Javićemo vam se u roku od 24h."
     },
     "About": {
         "eyebrow": "O NAMA",
