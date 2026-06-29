@@ -1,40 +1,35 @@
 import type { Metadata } from "next";
-import { NextIntlClientProvider } from "next-intl";
+import Script from "next/script";
+import "./globals.css";
 
-export async function generateMetadata({
-    params
-}: {
-    params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
-    const { locale } = await params;
+export const metadata: Metadata = {
+    title: "EkoGrid",
+    description: "Solarna rješenja za domaćinstva, kompanije i investitorske projekte."
+};
 
-    return {
-        metadataBase: new URL("https://ekogrid.ba"),
-        alternates: {
-            canonical: `/${locale}`,
-            languages: {
-                sr: "/sr",
-                en: "/en",
-                "x-default": "/sr"
-            }
-        }
-    };
-}
-
-export default async function LocaleLayout({
-    children,
-    params
+export default function RootLayout({
+    children
 }: {
     children: React.ReactNode;
-    params: Promise<{ locale: string }>;
 }) {
-    const { locale } = await params;
-
-    const messages = (await import(`../../messages/${locale}.json`)).default;
-
     return (
-        <NextIntlClientProvider locale={locale} messages={messages}>
-            {children}
-        </NextIntlClientProvider>
+        <html lang="sr">
+            <body>
+                <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=G-RYL60F10PV"
+                    strategy="afterInteractive"
+                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-RYL60F10PV');
+                    `}
+                </Script>
+
+                {children}
+            </body>
+        </html>
     );
 }
