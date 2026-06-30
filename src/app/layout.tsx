@@ -89,6 +89,47 @@ export const metadata: Metadata = {
   },
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Ekogrid",
+  alternateName: "Ekogrid Solar Solutions",
+  url: "https://ekogrid.ba",
+  logo: "https://ekogrid.ba/logo/ekogrid-logo3.svg",
+  image: "https://ekogrid.ba/images/og-image.png",
+  description:
+    "Ekogrid projektuje solarne elektrane za domaćinstva, kompanije i investitorske projekte. Usluge uključuju tehničku analizu, ekonomsku procjenu, PVSyst simulacije i stručne konsultacije.",
+
+  email: "info@ekogrid.ba",
+
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Trebinje",
+    addressRegion: "Republika Srpska",
+    addressCountry: "BA",
+  },
+
+  areaServed: {
+    "@type": "Country",
+    name: "Bosna i Hercegovina",
+  },
+
+  serviceType: [
+    "Projektovanje solarnih elektrana",
+    "Solarne elektrane za domaćinstva",
+    "Solarne elektrane za kompanije",
+    "Solarne elektrane za investitore",
+    "PVSyst simulacije",
+    "Tehnička analiza",
+    "Ekonomska analiza",
+    "Konsultacije za solarne elektrane",
+  ],
+
+  sameAs: [
+    "https://ekogrid.ba",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -96,7 +137,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="sr">
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
