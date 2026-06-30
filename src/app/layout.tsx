@@ -4,9 +4,39 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://ekogrid.ba"),
 
-  title: "Ekogrid | Solarna rješenja",
+  title: {
+    default: "EkoGrid | Solarne elektrane i solarna rješenja u BiH",
+    template: "%s | EkoGrid",
+  },
+
   description:
-    "Projektovanje i konsultacije za solarne elektrane za domaćinstva, kompanije i investitorske projekte.",
+    "EkoGrid projektuje solarne elektrane za domaćinstva, kompanije i investitorske projekte. Tehnička analiza, ekonomska procjena, PVSyst simulacije i stručne konsultacije.",
+
+  keywords: [
+    "EkoGrid",
+    "solarne elektrane",
+    "solarni paneli",
+    "solarna energija",
+    "solarna rješenja",
+    "fotonaponski sistemi",
+    "obnovljivi izvori energije",
+    "PVSyst",
+    "Trebinje",
+    "Bosna i Hercegovina",
+    "BiH",
+  ],
+
+  authors: [{ name: "EkoGrid" }],
+  creator: "EkoGrid",
+  publisher: "EkoGrid",
+
+  alternates: {
+    canonical: "https://ekogrid.ba/sr",
+    languages: {
+      sr: "https://ekogrid.ba/sr",
+      en: "https://ekogrid.ba/en",
+    },
+  },
 
   icons: {
     icon: [
@@ -20,17 +50,17 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 
   openGraph: {
-    title: "Ekogrid | Solarna rešenja",
+    title: "EkoGrid | Solarne elektrane i solarna rješenja u BiH",
     description:
       "Projektovanje i konsultacije za solarne elektrane za domaćinstva, kompanije i investitorske projekte.",
-    url: "https://ekogrid.ba",
+    url: "https://ekogrid.ba/sr",
     siteName: "EkoGrid",
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Ekogrid solarna rešenja",
+        alt: "EkoGrid solarna rješenja",
       },
     ],
     locale: "sr_BA",
@@ -39,10 +69,15 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "EkoGrid | Solarna rješenja",
+    title: "EkoGrid | Solarne elektrane i solarna rješenja u BiH",
     description:
       "Projektovanje i konsultacije za solarne elektrane za domaćinstva, kompanije i investitorske projekte.",
     images: ["/images/og-image.png"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
