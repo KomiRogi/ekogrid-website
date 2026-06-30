@@ -18,6 +18,8 @@ export const metadata: Metadata = {
     "solarni paneli",
     "solarna energija",
     "solarna rješenja",
+    "solarna rjesenja",
+    "solarna resenja",
     "solarna rešenja",
     "fotonaponski sistemi",
     "obnovljivi izvori energije",
