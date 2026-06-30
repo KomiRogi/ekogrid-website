@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://ekogrid.ba"),
 
-  title: "EkoGrid | Solarna rješenja",
+  title: "Ekogrid | Solarna rješenja",
   description:
     "Projektovanje i konsultacije za solarne elektrane za domaćinstva, kompanije i investitorske projekte.",
 
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 
   openGraph: {
-    title: "EkoGrid | Solarna rješenja",
+    title: "Ekogrid | Solarna rešenja",
     description:
       "Projektovanje i konsultacije za solarne elektrane za domaćinstva, kompanije i investitorske projekte.",
     url: "https://ekogrid.ba",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "EkoGrid solarna rješenja",
+        alt: "Ekogrid solarna rešenja",
       },
     ],
     locale: "sr_BA",
