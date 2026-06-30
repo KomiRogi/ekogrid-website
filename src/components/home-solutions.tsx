@@ -51,7 +51,7 @@ export default function HomeSolutions() {
                     {solutions.map((item) => (
                         <div
                             key={item.slug}
-                            className="group rounded-3xl border border-[#223330]/15 bg-white p-6 transition hover:-translate-y-1 hover:border-[var(--ekogrid-lime)]"
+                            className="group flex flex-col rounded-3xl border border-[#223330]/15 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-[var(--ekogrid-lime)]"
                         >
                             <div className="relative mb-5 h-48 overflow-hidden rounded-2xl">
                                 <Image
@@ -62,11 +62,11 @@ export default function HomeSolutions() {
                                 />
                             </div>
 
-                            <h3 className="text-2xl font-semibold">
+                            <h3 className="text-2xl font-bold tracking-tight">
                                 {item.title}
                             </h3>
 
-                            <p className="mt-4 leading-relaxed text-[#223330]/70">
+                            <p className="mt-4 flex-1 leading-relaxed text-[#223330]/70">
                                 {item.description}
                             </p>
 
