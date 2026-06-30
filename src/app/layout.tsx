@@ -5,30 +5,36 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://ekogrid.ba"),
 
   title: {
-    default: "EkoGrid | Solarne elektrane i solarna rješenja u BiH",
-    template: "%s | EkoGrid",
+    default: "Ekogrid | Solarne elektrane i solarna rješenja u BiH",
+    template: "%s | Ekogrid",
   },
 
   description:
-    "EkoGrid projektuje solarne elektrane za domaćinstva, kompanije i investitorske projekte. Tehnička analiza, ekonomska procjena, PVSyst simulacije i stručne konsultacije.",
+    "Ekogrid projektuje solarne elektrane za domaćinstva, kompanije i investitorske projekte. Tehnička analiza, ekonomska procjena, PVSyst simulacije i stručne konsultacije.",
 
   keywords: [
-    "EkoGrid",
+    "Ekogrid",
     "solarne elektrane",
     "solarni paneli",
     "solarna energija",
     "solarna rješenja",
+    "solarna rešenja",
     "fotonaponski sistemi",
     "obnovljivi izvori energije",
     "PVSyst",
+    "PV",
+    "Prozumjeri",
+    "Prosumeri",
+    "Kupac-proizvođač",
     "Trebinje",
+    "Hercegovina",
     "Bosna i Hercegovina",
     "BiH",
   ],
 
-  authors: [{ name: "EkoGrid" }],
-  creator: "EkoGrid",
-  publisher: "EkoGrid",
+  authors: [{ name: "Ekogrid" }],
+  creator: "Ekogrid",
+  publisher: "Ekogrid",
 
   alternates: {
     canonical: "https://ekogrid.ba/sr",
@@ -50,17 +56,17 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 
   openGraph: {
-    title: "EkoGrid | Solarne elektrane i solarna rješenja u BiH",
+    title: "Ekogrid | Solarne elektrane i solarna rješenja u BiH",
     description:
       "Projektovanje i konsultacije za solarne elektrane za domaćinstva, kompanije i investitorske projekte.",
     url: "https://ekogrid.ba/sr",
-    siteName: "EkoGrid",
+    siteName: "Ekogrid",
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "EkoGrid solarna rješenja",
+        alt: "Ekogrid solarna rješenja",
       },
     ],
     locale: "sr_BA",
@@ -69,7 +75,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "EkoGrid | Solarne elektrane i solarna rješenja u BiH",
+    title: "Ekogrid | Solarne elektrane i solarna rješenja u BiH",
     description:
       "Projektovanje i konsultacije za solarne elektrane za domaćinstva, kompanije i investitorske projekte.",
     images: ["/images/og-image.png"],
