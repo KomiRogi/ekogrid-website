@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
 
 export default function Navbar() {
     const t = useTranslations("Navbar");
@@ -15,14 +16,16 @@ export default function Navbar() {
             <nav className="mx-auto grid max-w-7xl grid-cols-2 items-center px-6 py-4 text-white md:grid-cols-[auto_1fr_auto]">
 
                 {/* Logo */}
-                <Image
-                    src="/logo/ekogrid-logo3.svg"
-                    alt="EkoGrid logo"
-                    width={140}
-                    height={50}
-                    priority
-                    className="h-12 w-auto"
-                />
+                <Link href={`/${locale}`} className="inline-flex shrink-0">
+                    <Image
+                        src="/logo/ekogrid-logo3.svg"
+                        alt="EkoGrid logo"
+                        width={140}
+                        height={50}
+                        priority
+                        className="h-12 w-auto"
+                    />
+                </Link>
 
                 {/* Desktop Menu */}
                 <div className="hidden items-center justify-center gap-10 text-sm text-[var(--ekogrid-muted)] md:flex">
